@@ -1,0 +1,84 @@
+.programs-item {
+  padding: 34px 20px 31px;
+  text-decoration: none;
+  border-radius: 3.491px;
+  background: linear-gradient(
+      358deg,
+      rgba(100, 123, 100, 0.77) -118.86%,
+      rgba(100, 123, 100, 0) 25.62%,
+      rgba(100, 123, 100, 0) 98.53%
+    ),
+    #fff;
+  transition: 0.2s ease-in-out;
+
+  min-width: 157px;
+  @include breakpoint($sm) {
+    min-width: 200px;
+  }
+  @include breakpoint($lg) {
+    padding: 70px 45px;
+  }
+  @include breakpoint($xl) {
+    padding: 78px 50px;
+  }
+
+  &:hover {
+    background: $primary;
+    .container-title,
+    .container-paragraph {
+      color: #fff;
+    }
+    svg path {
+      fill: white;
+    }
+  }
+  .programs-icon svg {
+    width: 23px;
+    height: 23px;
+
+    @include breakpoint($sm) {
+      width: 35px;
+      height: 35px;
+    }
+    @include breakpoint($lg) {
+      width: 50px;
+      height: 50px;
+    }
+    @include breakpoint($xl) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  .container-title {
+    text-transform: uppercase;
+    font-size: 10px;
+    color: $title-color;
+    font-weight: 500;
+    @include breakpoint($sm) {
+      font-size: 16px;
+    }
+    @include breakpoint($lg) {
+      font-size: 20px;
+    }
+    @include breakpoint($xl) {
+      font-size: 24px;
+    }
+  }
+
+  .container-paragraph {
+    font-size: 8px;
+    letter-spacing: 4%;
+    color: $paragraph-color;
+    margin-bottom: 0;
+    @include breakpoint($sm) {
+      font-size: 12px;
+    }
+    @include breakpoint($lg) {
+      font-size: 14px;
+    }
+    @include breakpoint($xl) {
+      font-size: 16px;
+    }
+  }
+}

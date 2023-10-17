@@ -1,0 +1,78 @@
+.footer-section {
+  padding-bottom: 40px;
+  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo logo" "company support" "message message";
+}
+.footer-section .logo-section {
+  grid-area: logo;
+}
+.footer-section .logo-section p {
+  font-size: 14px;
+}
+.footer-section .logo-section .logo {
+  display: flex;
+  align-items: center;
+  max-width: 138px;
+}
+.footer-section .logo-section .logo svg:first-child {
+  margin-right: 10px;
+}
+.footer-section .logo-section .logo svg:hover {
+  paint-order: stroke;
+  stroke: rgb(66, 181, 248);
+  stroke-width: 3px;
+}
+.footer-section .social-media {
+  display: flex;
+  gap: 16px;
+}
+.footer-section .social-media .social-icon {
+  padding: 7px;
+  display: flex;
+  background-color: rgb(243, 241, 236);
+  border-radius: 50%;
+}
+.footer-section .social-media .social-icon .img {
+  width: 17px;
+  height: 17px;
+}
+.footer-section .company-section {
+  grid-area: company;
+}
+.footer-section .support-section {
+  grid-area: support;
+}
+.footer-section .company-section h6,
+.footer-section .support-section h6 {
+  color: #647b64;
+  font-size: 20px;
+  font-style: normal;
+  margin-top: 0;
+}
+.footer-section .company-section p,
+.footer-section .support-section p {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer-section .message-section {
+  grid-area: message;
+}
+.footer-section .message-section h6 {
+  color: #647b64;
+  font-size: 20px;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  margin-top: 0;
+}
+.footer-section #message {
+  margin-bottom: 28px;
+  padding: 12px 24px;
+  border: 0;
+}
+.footer-section .button {
+  max-width: 270px;
+}/*# sourceMappingURL=footer.css.map */

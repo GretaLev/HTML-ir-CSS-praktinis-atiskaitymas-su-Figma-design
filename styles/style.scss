@@ -1,0 +1,320 @@
+@import "variables";
+@import "breakpoints";
+@import "mixins";
+@import "buttons";
+@import "services-items";
+@import "text-style";
+@import "programs-item";
+@import "partner-item";
+@import "footer";
+@import "header";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background-color: #ffffff;
+  margin: 0;
+  overflow-x: hidden;
+  background-image: url(/images/background-img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  color: $paragraph-color;
+}
+.container {
+  max-width: 100%;
+  padding: 0 32px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  @include breakpoint($lg) {
+    padding: 0 50px;
+  }
+  @include breakpoint($xl) {
+    padding: 0;
+    max-width: 1160px;
+  }
+}
+
+.hero-section {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 60px 0 125px 0;
+
+  position: relative;
+  @include breakpoint($lg) {
+    align-items: center;
+    padding: 0px 0 125px 0;
+  }
+  .hero-content {
+    width: 87%;
+    position: relative;
+    @include breakpoint($sm) {
+      width: 60%;
+    }
+    @include breakpoint($lg) {
+      max-width: 495px;
+      padding-left: 40px;
+    }
+
+    .circle-img {
+      position: absolute;
+      right: 50%;
+      @include breakpoint($sm) {
+        right: 70%;
+      }
+      @include breakpoint($xl) {
+        right: 55%;
+        top: 5%;
+      }
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $title-color;
+      @include breakpoint($lg) {
+        font-size: 38px;
+      }
+    }
+
+    p {
+      font-size: 10px;
+      @include breakpoint($md) {
+        font-size: 16px;
+      }
+    }
+  }
+  .hero-icon {
+    // max-width: 100%;
+
+    width: 13%;
+    @include breakpoint($sm) {
+      width: 40%;
+    }
+    @include breakpoint($lg) {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      max-height: 300px;
+      position: absolute;
+      right: -35%;
+      top: 5%;
+      @include breakpoint($sm) {
+        right: 0;
+      }
+      @include breakpoint($lg) {
+        position: static;
+        max-height: 400px;
+      }
+      @include breakpoint($xl) {
+        max-height: 585px;
+      }
+    }
+  }
+}
+
+.services {
+  .container {
+    @include breakpoint($xl) {
+      overflow-x: visible;
+    }
+  }
+  &-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 55px;
+    @include breakpoint($lg) {
+      flex-direction: row;
+      gap: 110px;
+    }
+
+    .left-section {
+      position: relative;
+      width: 75%;
+      margin-bottom: 70px;
+
+      p {
+        @include breakpoint($xl) {
+          max-width: 410px;
+        }
+      }
+      .background {
+        width: 400px;
+        height: 68px;
+        position: absolute;
+        left: -120px;
+        @include breakpoint($md) {
+          width: 600px;
+          height: 100px;
+        }
+        @include breakpoint($lg) {
+          width: 717px;
+          height: 120px;
+          left: -160px;
+        }
+      }
+    }
+    .right-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+  }
+}
+
+.programs {
+  .container {
+    @include breakpoint($xl) {
+      overflow-x: visible;
+    }
+  }
+  &-section {
+    margin-bottom: 90px;
+    .programs-title {
+      text-align: center;
+    }
+    .programs-container {
+      display: flex;
+      gap: 17px;
+      margin-left: 14px;
+      position: relative;
+      @include breakpoint($lg) {
+        gap: 40px;
+        margin-left: 0;
+      }
+
+      .dots-image {
+        position: absolute;
+        bottom: -10%;
+        left: -14px;
+        z-index: -1;
+        @include breakpoint($lg) {
+          width: 150px;
+          left: -20px;
+        }
+        @include breakpoint($xl) {
+          width: 214px;
+          left: -35px;
+        }
+      }
+    }
+  }
+}
+
+.partnership-section {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  @include breakpoint($xl) {
+    justify-content: space-between;
+  }
+
+  .left-section {
+    position: relative;
+    left: -92%;
+    @include breakpoint($sm) {
+      width: 40%;
+      left: -15%;
+    }
+    @include breakpoint($md) {
+      left: 0;
+      width: 50%;
+    }
+    @include breakpoint($lg) {
+    }
+
+    img.people {
+      position: relative;
+      width: 286px;
+      height: 277px;
+      @include breakpoint($lg) {
+        width: 400px;
+        height: 420px;
+      }
+      @include breakpoint($xl) {
+        width: 563px;
+        height: 545px;
+      }
+    }
+
+    img.people-background {
+      width: 277px;
+      height: 285px;
+      position: absolute;
+      z-index: -1;
+      bottom: -10%;
+      left: 15%;
+      @include breakpoint($lg) {
+        width: 400px;
+        height: 420px;
+        left: 10%;
+        bottom: -5%;
+      }
+      @include breakpoint($xl) {
+        width: 563px;
+        height: 545px;
+      }
+    }
+  }
+  .right-section {
+    position: absolute;
+    width: 285px;
+    margin-left: 50px;
+    @include breakpoint($sm) {
+      width: 60%;
+      position: inherit;
+    }
+    @include breakpoint($md) {
+      width: 50%;
+    }
+    @include breakpoint($lg) {
+      width: 412px;
+    }
+
+    .section-title {
+      font-size: 22px;
+    }
+  }
+}
+
+.partners-section {
+  .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .right-section {
+      display: none;
+      @include breakpoint($md) {
+        display: flex;
+        gap: 20px;
+      }
+      .button-arrow {
+        padding: 15px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.06);
+          background: linear-gradient(102deg, $primary -4.62%, #6add6a 178.22%);
+
+          svg path {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}

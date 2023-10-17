@@ -1,0 +1,20 @@
+.section-subtitle {
+  color: #f3b562;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  color: #647b64;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.paragraph-large {
+  font-size: 10px;
+  letter-spacing: 4%;
+  margin-bottom: 16px;
+}/*# sourceMappingURL=text-style.css.map */

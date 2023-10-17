@@ -1,0 +1,85 @@
+.bottom-section {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-bottom: 65px;
+  overflow-x: hidden;
+  align-items: stretch;
+  margin-left: 32px;
+
+  @include breakpoint($lg) {
+    gap: 34px;
+    margin-left: 50px;
+  }
+  @include breakpoint($xl) {
+    gap: 40px;
+    margin-left: calc((100vw - 1160px) / 2);
+  }
+
+  .partner-item {
+    background: linear-gradient(
+        358.27deg,
+        rgba(100, 123, 100, 0.77) -118.86%,
+        rgba(100, 123, 100, 0) 25.62%,
+        rgba(100, 123, 100, 0) 98.53%
+      ),
+      linear-gradient(0deg, #ffffff, #ffffff);
+
+    padding: 20px 16px 20px 26px;
+    width: 233px;
+
+    @include breakpoint($lg) {
+      width: auto;
+      height: auto;
+      padding: 35px 24px 24px 30px;
+    }
+    @include breakpoint($xl) {
+      max-width: 360px;
+      min-width: 360px;
+      padding: 49px 32px 32px 40px;
+    }
+
+    .partner-paragraph {
+      font-size: 12px;
+      color: $paragraph-color;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 0;
+      letter-spacing: 0.64px;
+      @include breakpoint($xl) {
+        max-width: 215px;
+      }
+    }
+    .item-wrapper {
+      display: flex;
+
+      img {
+        height: 173px;
+        @include breakpoint($lg) {
+          height: 228px;
+        }
+        @include breakpoint($xl) {
+          height: 268px;
+        }
+      }
+      .text-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .agent-company {
+        font-size: 12px;
+        color: $title-color;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+
+      .agent-name {
+        font-size: 10px;
+        font-weight: 400;
+        color: $paragraph-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
